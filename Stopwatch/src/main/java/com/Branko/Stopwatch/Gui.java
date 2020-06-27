@@ -27,6 +27,8 @@ public class Gui implements Runnable {
 						
 						frame.setVisible(true);
 						
+						frame.setResizable(false);
+						
 						
 						
 						
@@ -36,8 +38,8 @@ public class Gui implements Runnable {
 							
 							area = new JTextArea("00:00:00");
 							area.setEditable(false);
-							area.setFont(new Font("Courier",Font.BOLD,150));
-
+							area.setFont(new Font("Courier",Font.BOLD,158));
+											
 							DrawingBoard b = new DrawingBoard();
 							container.add(area);
 							container.add(buttons(),BorderLayout.SOUTH);
@@ -56,8 +58,11 @@ public class Gui implements Runnable {
 							JPanel panel = new JPanel(new GridLayout(1,4));
 							
 							start = new JButton("Start");
+							start.setFont(new Font("Courier",Font.BOLD,30));
 							pause = new JButton("Pause");
+							pause.setFont(new Font("Courier",Font.BOLD,30));
 							reset = new JButton("Reset");
+							reset.setFont(new Font("Courier",Font.BOLD,30));
 							
 							panel.add(start);
 							panel.add(pause);

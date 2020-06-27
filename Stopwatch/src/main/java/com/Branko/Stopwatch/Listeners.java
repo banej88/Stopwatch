@@ -68,7 +68,7 @@ public class Listeners implements ActionListener {
 		
 								while(true) {
 									
-									if(seconds==60) {
+									if(seconds>59) {
 										
 										seconds=0;
 									}
@@ -83,11 +83,11 @@ public class Listeners implements ActionListener {
 									seconds++;
 									
 									
-									if(seconds==59) {
+									if(seconds>59) {
 										
 										minutes++;
 									}
-									if(minutes==59) {
+									if(minutes>59) {
 										
 										minutes=0;
 										hours++;
