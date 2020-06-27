@@ -1,6 +1,8 @@
 package com.Branko.Stopwatch;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.Thread.State;
+
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 
@@ -30,11 +32,15 @@ public class Listeners implements ActionListener {
 	
 						public void actionPerformed(ActionEvent ae) {
 												
-									
+										
 										if(ae.getSource()==start) {
-											
-											start();
-											
+										
+											    if(pocetak!=null && pocetak.isAlive()) {
+											    	
+											    }else {
+												start();
+											    }
+
 										}else if(ae.getSource()==reset) {
 											
 											reset();
@@ -56,9 +62,10 @@ public class Listeners implements ActionListener {
 						
 						public void start() {
 							
-							pocetak = new Thread(new Runnable() {
+							pocetak = new Thread(new Runnable() {					
 								
 								public void run() {
+		
 								while(true) {
 									
 									if(seconds==60) {
@@ -86,7 +93,7 @@ public class Listeners implements ActionListener {
 										hours++;
 									}
 									
-								}		
+								}	
 
 							}	
 						});
