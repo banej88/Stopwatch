@@ -18,6 +18,9 @@ public class Gui implements Runnable {
 						
 						frame = new JFrame("Stopwatch");
 						
+						ImageIcon icon = new ImageIcon("resources/icon.png");
+						frame.setIconImage(icon.getImage());
+						
 						frame.setPreferredSize(new Dimension(640,320));
 						frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 						
